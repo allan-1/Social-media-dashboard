@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Inter', sans-serif;
+}
+.container{
+    margin: 2rem;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.summary, .overview{
+    display:grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 2rem;
+    margin-top: 2rem;
+}
+.summ{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.3rem;
+    border-radius: 0.5rem;
+    flex-wrap: nowrap;
+}
+.bg-dark{
+    background-color: hsl(228, 28%, 20%);
+}
+.dark{
+    background-color: hsl(230, 17%, 14%);
+    color: hsl(0, 0%, 100%);
+}
+.overview h1{
+    grid-column: 1 / span 4;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    line-height: 1.5;
+}
+.username, .new{
+    display: flex;
+    margin-top: 1rem;
+}
+i{
+    margin: 0.5rem 0.5rem;
+}
+.button{
+    display: flex;
+}
+.btn{
+    width: 3rem;
+    background: linear-gradient(100deg, hsl(210, 78%, 56%), chartreuse);
+    height: 1.3rem;
+    margin-left: 1rem;
+    border-radius: 5rem;
+    color: hsl(232, 19%, 15%);
+    cursor: pointer;
+}
+.dark-btn{
+    transform: translateX(10%);
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-in;
+}
+.followers > p{
+    letter-spacing: 0.5rem;
+    color: hsl(228, 34%, 66%);
+}
+.followers h1{
+    font-size: 3rem;
+}
+.username p, .header p{
+    color: hsl(228, 34%, 66%);
+    font-weight: 700;
+}
+.new{
+    color: hsl(163, 72%, 41%);
+}
+.fa-facebook-square, .fa-twitter{
+    color: hsl(208, 92%, 53%);
+    font-size: 1.5rem;
+}
+.fa-instagram{
+    color: pink;
+    font-size: 1.5rem;
+}
+.fa-youtube{
+    color: hsl(348, 97%, 39%);
+    font-size: 1.5rem;
+}
+.facebook{
+    border-top: 3px hsl(208, 92%, 53%) solid;
+}
+.twitter{
+    border-top: 3px hsl(203, 89%, 53%) solid;
+}
+.instagram{
+    border-top: 3px hsl(329, 70%, 58%) solid
+}
+.youtube{
+    border-top: 3px hsl(348, 97%, 39%) solid;
+}
+.views {
+    line-height: 3rem;
+}
+.bg-dark:hover{
+    opacity: 0.7;
+}
+.views h3{
+    color: hsl(228, 34%, 66%);
+}
+
+/* light mode */
+.light-btn{
+    transform: translateX(160%);
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-out; 
+}
+.bg-light{
+    background-color: hsl(225, 100%, 98%);
+    color: black;
+}
+.light{
+    background-color: hsl(0, 0%, 100%);    
+}
+/* media breakpoint */
+@media(max-width : 600px){
+    .summary{
+        grid-template-columns: auto;
+    }
+    .overview{
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+    }
+    .light-btn{
+        transform: translateX(95%);
+    }
+
+}
